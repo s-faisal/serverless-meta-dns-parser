@@ -53,7 +53,7 @@ java -D"java.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar" -sharedDb 
 Before accessing the dynamodb, you will have to configure your credentials in AWS CLI. You can use `aws configure` for the same. Since we are using setting it up on local you can pass any random value in `AWS Access Key ID`  and `AWS Secret Access Key`.
 
 ##### Note: In all the below dynamodb queries, if you are want to use different AWS CLI profile other than the default one than add --profile {{PROFILE_NAME}}. Replace {{PROFILE_NAME}} with your aws profile name. Also, endpoint-url will have the port no that was used while starting the dynamodb. It is important to pass endpoint-url, if the same is not passed then your AWS CLI command will communicate with the AWS online service.
-Once this is done use below command to **create a dynamodb table** which will log the request / response of our endpoints
+Once this is done use below command to **create a dynamodb table** which will log the request / response of our endpoints.
 ```
 create-table
 aws dynamodb create-table --attribute-definitions AttributeName=api_log_id,AttributeType=S --table-name api_logs --key-schema AttributeName=api_log_id,KeyType=HASH  --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 --region us-east-1 --output json --endpoint-url http://localhost:8000
