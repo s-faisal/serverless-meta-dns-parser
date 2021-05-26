@@ -29,7 +29,7 @@ AWS gives you 3 ways to install dynamodb locally.
 
 We will be using .jar executable to setup our dynamodb instance on local system. Below are the ways via which you download the .jar executable on your local system. 
 - Click on any of the download link present on  [AWS website](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html) 
-- Click here [Download](ttps://s3.ap-south-1.amazonaws.com/dynamodb-local-mumbai/dynamodb_local_latest.zip)
+- Click here [Download](https://s3.ap-south-1.amazonaws.com/dynamodb-local-mumbai/dynamodb_local_latest.zip)
 - Execute given command on your terminal. \
 `
 curl https://s3.ap-south-1.amazonaws.com/dynamodb-local-mumbai/dynamodb_local_latest.zip
