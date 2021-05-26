@@ -1,0 +1,51 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: meta-dns-parser
+
+package:
+  individually: true
+
+plugins:
+  - serverless-offline        #Runs the serverless project on the local system
+  - serverless-mocha-plugin   #Executes the test case in serverless env
+
+provider:
+  name: aws
+  versionFunctions: false
+  runtime: nodejs12.x
+  timeout: 30
+  stage: dev
+  region: us-east-1
+
+functions:
+  fetchMetaTags:
+    handler: services/fetch_metatags.handler
+    events:
+      - http:
+          path: fetchMetaTags
+          method: post
+
+  fetchDNSRecord:
+    handler: services/fetch_dns_record.handler
+    events:
+      - http:
+          path: fetchDNSRecord
+          method: post
+
+  hello:
+    handler: services/hello.handler
+    events:
+      - http:
+          path: hello
+          method: get

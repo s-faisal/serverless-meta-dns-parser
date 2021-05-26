@@ -1,0 +1,36 @@
+{
+  "name": "serverless-meta-dns-parser",
+  "version": "1.0.0",
+  "description": "This serverless project that has 2 endpoints, one to validate if a metatag is present in a site and another one to validate if a dns txt record is present in a domain and store the api logs in the dynamodb(locally).",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-faisal/serverless-meta-dns-parser.git"
+  },
+  "keywords": [
+    "serverless-meta-dns-parser",
+    "serverlessmetadnsparser",
+    "dnstxt",
+    "metatag",
+    "serverless",
+    "scraping"
+  ],
+  "author": "Faisal Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-faisal/serverless-meta-dns-parser/issues"
+  },
+  "homepage": "https://github.com/s-faisal/serverless-meta-dns-parser#readme",
+  "dependencies": {
+    "aws-sdk": "^2.912.0",
+    "cheerio": "^1.0.0-rc.9",
+    "serverless": "^2.43.1"
+  },
+  "devDependencies": {
+    "serverless-mocha-plugin": "^1.12.0",
+    "serverless-offline": "^7.0.0"
+  }
+}
