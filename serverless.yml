@@ -55,6 +55,7 @@ functions:
           path: hello
           method: get
 
+##Below code will create the dynamodb table automatically at the time of deployment
 resources:
   Resources:
     apiLogs:
