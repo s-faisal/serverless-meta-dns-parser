@@ -27,6 +27,11 @@ provider:
   timeout: 30
   stage: dev
   region: us-east-1
+  iamRoleStatements:
+   - Effect: "Allow"
+     Action:
+       - "dynamodb:*"
+     Resource: "*"
 
 functions:
   fetchMetaTags:
@@ -49,3 +54,19 @@ functions:
       - http:
           path: hello
           method: get
+
+resources:
+  Resources:
+    apiLogs:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: api_logs
+        AttributeDefinitions:
+          - AttributeName: api_log_id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: api_log_id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

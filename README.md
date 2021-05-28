@@ -1,6 +1,6 @@
 # serverless-meta-dns-parser
 
-This serverless project that has 2 endpoints, one to validate if a metatag is present in a site and another one to validate if a dns txt record is present in a domain and store the api logs in the dynamodb(locally).
+This serverless project that has 2 endpoints, one to validate if a metatag is present in a site and another one to validate if a dns txt record is present in a domain and store the api logs in the dynamodb.
 
 ## Modules Used
 
@@ -129,4 +129,17 @@ Output
     ],
     "success_message": "Kindly find DNS Txt Record value for the given URL(http://example.org/)!"
 }
+```
+## Deployment
+Deploying your serverless code is as easy as managing it. Use below command to deploy the same while being in your serverless repo.
+```
+sls deploy 
+## if you have multiple aws profiles configured on your system
+sls deploy --aws-profile {{PROFILE_NAME}}
+```
+OR
+```
+serverless deploy 
+## if you have multiple aws profiles configured on your system
+serverless deploy --aws-profile {{PROFILE_NAME}}
 ```
