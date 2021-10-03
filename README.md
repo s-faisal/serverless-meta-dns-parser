@@ -143,3 +143,12 @@ serverless deploy
 ## if you have multiple aws profiles configured on your system
 serverless deploy --aws-profile {{PROFILE_NAME}}
 ```
+## Contribute
+Found a bug, please [create an issue](https://github.com/s-faisal/serverless-meta-dns-parser/issues/new)
+
+## How can I support developers?
+
+- Star our GitHub repo 🌟
+- Create pull requests, submit bugs, suggest new features or documentation updates 🔧
+
+We're always happy to receive your feedback!
